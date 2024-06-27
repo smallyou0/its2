@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해피올드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body class="bg-white">
+    <header class="header">
+      <div class="align triple both bg-white">
+        <a href="javascript:window.history.back();"><img src="images/ico_back.svg" alt=""></a>
+      </div>
+    </header>
+    <main class="main">
+      <section class="content pb130">
+        <div class="img-wrap2 px16 pt30" onclick="alert('준비중입니다')">
+          <img src="images/@img_its4.png" alt="">
+        </div>   
+        <div class="border-10 mt18"></div>
+        <div class="img-wrap2 px16 pt15">
+          <img src="images/@img_its5.png" alt="">
+        </div> 
+        <div class="px16 pt37">
+          <button class="btn-main-on w100" type="button" onclick="location.href='search2.html'">경로 검색</button>
+        </div>
+      </section>
+      <div class="nav-foot">
+        <!-- <div class="writing-explanation">작성중인 계량증명서가 있습니다</div> -->
+        <!-- <button class="btn-select" type="button" onclick="alert('준비중입니다')"></button> -->
+        <nav class="nav-foot__cont">
+          <ul>
+            <li>
+              <button class="btn-map" type="button" onclick="location.href='home.html'"></button> 
+            </li>
+            <li class="ico-nav1 active"><a href="search1.html">경로 탐색</a></li>
+            <li class="ico-nav2"><a href="trailer.html">트레일러</a></li>
+            <li class="ico-nav3"><a href="control.html">차량 제어</a></li>
+          </ul>
+        </nav>
+      </div>     
+      <div class="layer"></div>
+      <div class="modal-1">
+        <div class="text-type4 fz16 fw400 lh155 txt-center pt50 pb50 border-bottom">
+          저장된 인테리어 진행 내역이 있습니다<br>
+          불러오시겠습니까?
+        </div>
+        <div class="align both">
+          <button type="button" id="btnYes">예</button>
+          <button type="button" id="btnNo">아니오</button>
+        </div>
+      </div>
+    </main>
+    <script>
+$('#btnRace').click(function() {
+    $('#btnRace').toggleClass('active');
+
+    var img = $('.img-map');
+    var currentSrc = img.attr('src');
+
+    if (currentSrc === 'images/@img_its1.png') {
+        img.attr('src', 'images/@img_its3.png');
+    } else {
+        img.attr('src', 'images/@img_its1.png');
+    }
+});
+
+      
+    </script>
+  </body>
+  <script src="js/button.js"></script>
+  <script src="js/navFoot.js"></script>
+</html>

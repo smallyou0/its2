@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해피올드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+  <body class="bg-f8">
+    <header class="header">
+      <div class="align triple both bg-white">
+        <a href="javascript:window.history.back();"><img src="images/ico_back.svg" alt=""></a>
+        <div class="text-type4 fz13 fw400">교대역 지하철 3호선 <img class="mx10" src="images/ico_angle.svg" alt=""> 양재시민의숲</div>
+        <div class="header__alarm w-24">
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="content">
+        <div 
+        class="text-type4 fz15 text-center py10 px16 bg-white w100" style="position: fixed;">
+        13:10 도착 예정</div>
+        <div class="img-wrap2">
+          <img class="img-map height2" src="images/@img_its6.png" alt="">
+        </div>   
+        <div class="fixed-bottom">
+          <button class="btn-main-on white w100" type="button" onclick="location.href='search1.html'">경로 재탐색</button>
+          <button class="btn-main-on w100 mt12" type="button" onclick="alert('준비중입니다')">경로 안내 시작</button>
+        </div>
+        
+      </section>
+
+      
+    </main>
+    <script>
+      $('#btnRace').click(function() {
+          $('#btnRace').toggleClass('active');
+
+          var img = $('.img-map');
+          var currentSrc = img.attr('src');
+
+          if (currentSrc === 'images/@img_its1.png') {
+              img.attr('src', 'images/@img_its3.png');
+          } else {
+              img.attr('src', 'images/@img_its1.png');
+          }
+      });
+    </script>
+  </body>
+  <script src="js/button.js"></script>
+  <script src="js/navFoot.js"></script>
+</html>
